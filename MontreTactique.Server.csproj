@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>MontreTactique.Server</AssemblyName>
+    <RootNamespace>MontreTactique</RootNamespace>
+    <!-- Le mod est chargé par le serveur SPT : on ne recopie pas les DLL de SPT -->
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Bibliothèques du serveur SPT 4.1 (fournies par le serveur au moment de l'exécution) -->
+    <PackageReference Include="SPTarkov.Server.Core" Version="4.1.2" ExcludeAssets="runtime" />
+    <PackageReference Include="SPTarkov.DI" Version="4.1.2" ExcludeAssets="runtime" />
+    <PackageReference Include="SPTarkov.Common" Version="4.1.2" ExcludeAssets="runtime" />
+  </ItemGroup>
+
+</Project>

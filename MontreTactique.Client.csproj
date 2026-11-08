@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net471</TargetFramework>
+    <AssemblyName>MontreTactique.Client</AssemblyName>
+    <RootNamespace>MontreTactique</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <DebugType>none</DebugType>
+    <!-- Dossier SPT du jeu : modifie ici si besoin -->
+    <SptDir>E:\SPT</SptDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="MontreTactiquePlugin.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="$(SptDir)\BepInEx\core\BepInEx.dll" Private="false" />
+    <Reference Include="$(SptDir)\EscapeFromTarkov_Data\Managed\Assembly-CSharp.dll" Private="false" />
+    <Reference Include="$(SptDir)\EscapeFromTarkov_Data\Managed\Comfort.dll" Private="false" />
+    <Reference Include="$(SptDir)\EscapeFromTarkov_Data\Managed\UnityEngine*.dll" Private="false" />
+    <Reference Include="$(SptDir)\EscapeFromTarkov_Data\Managed\Unity.*.dll" Private="false" />
+  </ItemGroup>
+
+</Project>
