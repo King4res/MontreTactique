@@ -1,2 +1,2 @@
 # MontreTactique
-Montre tactique 1.0.0 pour SPT 4.1.6
+Montre tactique 1.0.1 pour SPT 4.1.6
